@@ -6,7 +6,7 @@ Features :
 - Currently user registration can only be done using admin. This is done because this was a closed event.
 - Admin interface for all user details, level and question upload.
 - Logs for answer tries, with user details and IP address.
-- Question can be of image, text, link or even a hiddent HTML block.
+- Question can be of image, text, link or even a hidden HTML block.
 - Passwords are encrypted in the database.
 
 Technical Specs:
