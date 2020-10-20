@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
-from .models import CustomUser
+from .models import CustomUser, Logs
 
 class CustomUserAdmin(UserAdmin):
     model = CustomUser
@@ -21,3 +21,12 @@ class CustomUserAdmin(UserAdmin):
     ordering = ('email',)
 
 admin.site.register(CustomUser, CustomUserAdmin)
+
+class LogsAdmin(admin.ModelAdmin):
+    model = CustomUser
+    list_display = ('user', 'level', 'text', 'ip_address', 'datetime')
+    list_filter = ('user', 'level', 'ip_address', 'datetime')
+    
+    ordering = ('datetime',)
+
+admin.site.register(Logs, LogsAdmin)

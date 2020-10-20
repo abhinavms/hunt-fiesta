@@ -37,3 +37,13 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return self.email
+
+class Logs(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete = models.CASCADE)
+    level = models.IntegerField(blank=True, null=True)
+    text = models.CharField(max_length=150, blank=True, null=True)
+    ip_address = models.GenericIPAddressField(null=True)
+    datetime = models.DateTimeField(null=True, blank=True)
+
+    class Meta: 
+        verbose_name = 'User Log'

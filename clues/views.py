@@ -1,6 +1,21 @@
 from django.shortcuts import render, redirect
-from users.models import CustomUser
+from users.models import CustomUser, Logs
 from .models import Level
+from django.utils import timezone
+
+def get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        print ("returning FORWARDED_FOR")
+        ip = x_forwarded_for.split(',')[-1].strip()
+    elif request.META.get('HTTP_X_REAL_IP'):
+        print ("returning REAL_IP")
+        ip = request.META.get('HTTP_X_REAL_IP')
+    else:
+        print ("returning REMOTE_ADDR")
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
+
 
 def hunt_page(request):
     if request.user.is_authenticated:
@@ -12,7 +27,14 @@ def hunt_page(request):
             return redirect("/")
 
         if request.method == 'POST':
-            if (request.POST.get('answer') == Level.objects.get(no=user.level).answer):
+            log = Logs.objects.create(user=user)
+            # log.user = CustomUser.objects.get(email=email)
+            log.level = user.level
+            log.text = request.POST.get('answer')
+            log.ip_address = get_client_ip(request)
+            log.datetime = timezone.localtime()
+            log.save()
+            if (request.POST.get('answer') == Level.objects.get(no=user.level).answer):   
                 user.level += 1
                 user.save()
             return redirect("hunt")
