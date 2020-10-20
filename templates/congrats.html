@@ -40,34 +40,13 @@
             <div class="container">
                 <div class="block-heading"></div>
                 <div class="block-content">
-                    <h3 style="font-weight: bold;">Level {{ no }}</h3>
+                    <h3 style="font-weight: bold;">Level &infin;</h3>
                     <div style="margin-top: 5%;">
-                        
-                        {% if text %}
                         <div class="row text-clue">
                             <div class="col">
-                                <p>{{ text }}</p>
+                                <p>Congrats. You have reached the end of the line. Thanks for participating in the competition and hope you had fun : )</p>
                             </div>
                         </div>
-                        {% endif %}
-
-                        {% if picture %}
-                        <div class="row image-clue">
-                            <div class="col"><img class="responsive-img" src="{{ picture }}"></div>
-                        </div>
-                        {% endif %}
-                        
-                        {%if hiddenHTML %}
-                            <!-- {{ hiddenHTML}} -->
-                        {% endif %}
-
-                        <form method="POST" action="hunt">
-                        {% csrf_token %}
-                        <div class="row" style="margin-top: 3%;">
-                            <div class="col"><input type="text" id ="answer" name="answer" class="form-control"></div>
-                            <div class="col"><button class="btn btn-primary" type="submit">Submit</button></div>
-                        </div>
-                        </form>
                     </div>
                 </div>
             </div>
