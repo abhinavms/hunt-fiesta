@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Hunt Fiesta</title>
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="{% static "css/untitled.css" %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="/">Hunt Fiesta</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page faq-page">
+        <section class="clean-block clean-faq dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Event Guidelines</h2>
+                </div>
+                <div class="block-content">
+                    <h1>Rules for answers</h1>
+                    <div class="faq-item">
+                        <h4 class="question">Your answer must be in all small letter.</h4>
+                        <h4 class="question">No symbols, space or capital letter is accepted as answers.</h4>
+                        <p style="color: #7f7d7d;">Example : If there are two words like Captain America. Then your answer should be captainamerica.</p>
+                        <h4 class="question">Your answer can also be numbers.</h4>
+                    </div>
+                </div>
+                <div class="block-content">
+                    <h1>General Rules</h1>
+                    <div class="faq-item">
+                        <h4 class="question">Sharing of answers and any other malpractices are strictly prohibited and if found will lead to disqualification.</h4>
+                        <h4 class="question">The first team that reach the end of the hunt will be declared the winner.</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+</body>
+
+</html>

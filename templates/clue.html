@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Hunt Fiesta</title>
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="{% static "css/untitled.css" %}">
+</head>
+
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="/">Hunt Fiesta</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page product-page" style="height: 100%;">
+        <section class="clean-block clean-product dark" style="min-height: 100%;">
+            <div class="container">
+                <div class="block-heading"></div>
+                <div class="block-content">
+                    <h3 style="font-weight: bold;">Level 02</h3>
+                    <div style="margin-top: 5%;">
+                        <div class="row text-clue">
+                            <div class="col">
+                                <p>this is a clue. Clue clue clue. Text clue.</p>
+                            </div>
+                        </div>
+                        <div class="row image-clue">
+                            <div class="col"><img class="responsive-img" src="{% static 'img/landingpage/gif.gif' %}"></div>
+                        </div>
+                        <div class="row" style="margin-top: 3%;">
+                            <div class="col"><input type="text" class="form-control"></div>
+                            <div class="col"><button class="btn btn-primary" type="button">Submit</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Hunt Fiesta</title>
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="{% static "css/untitled.css" %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="/">Hunt Fiesta</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link active" href="">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page landing-page">
+        <section class="clean-block clean-hero" style="background-image:url({% static 'img/landingpage/banner.jpg' %});color:rgba(9, 162, 255, 0.85);">
+            <div class="text">
+                <h2>Welcome to Hunt Fiesta</h2>
+                <p>It's not the treasure - it's about the hunt</p><a href="about"><button class="btn btn-outline-light btn-lg" type="button">Learn More</button></a></div>
+        </section>
+        <section class="clean-block clean-info dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Info</h2>
+                    <p>Hunt Fiesta is a treasure hunt organised by IEEE SCT SB exclusively for it's subcom members.</p>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-6"><img class="img-thumbnail" src="{% static 'img/landingpage/gif.gif' %}"></div>
+                    <div class="col-md-6">
+                        <h3>About IEEE SCT SB</h3>
+                        <div class="getting-started-info">
+                            <p>IEEE started off in Sree Chitra Thirunal College Of Engineering&nbsp; with the registration of members on 23rd October 2009 with 30 members in it's first phase. The Student Branch is one of the top 10 SBs in the Travancore
+                                Hub. Sree Chitra Thirunal College Of Engineering is one of the leading engineering colleges in Thiruvananthapuram, Kerala.</p><a href="https://www.ieeesctsb.org/"><button class="btn btn-outline-primary btn-lg" type="button">Join Now</button></a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+</body>
+
+</html>
