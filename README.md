@@ -1,5 +1,5 @@
 # Hunt Fiesta
-Hunt Fiesta is an online hunt app built on Django.
+Hunt Fiesta is an online treasure hunt app built on Django.
 
 Features : 
 - There is a superuser account. Only the superuser can grant or revoke other admin rights.
